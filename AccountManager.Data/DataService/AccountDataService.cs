@@ -1,16 +1,17 @@
 ﻿using AccountManager.Data.Core;
-using AccountManager.Data.Models;
+using AccountManager.Data.DataService;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AccountManager.Data.DataService
+namespace AccountManager.Data.DataServices
 {
-    public class AccountDataService : DataServiceBase<Account, AccountManagerDBContext>
+    public class AccountDataService : DataServiceBase<AccountTypeDataService, AccountManagerDBContext>
     {
         public AccountDataService(IMapper mapper, AccountManagerDBContext context) : base(mapper, context)
         {
+
         }
     }
 }
